@@ -8,6 +8,6 @@ type B = A & {b: boolean};
 type C = B & {c: boolean};
 
 var base: Base = assign({base: false});
-var a: A = assign(base, {a: true});
-var b: B = assign(a, {b: false});
-var c: C = assign(b, {c: true});
+var a: A = assign({base: false}, {a: true});
+var b: B = assign({base: false}, {a: true}, {b: true});
+var c: C = assign({base: false}, {a: true}, {b: true}, {c: false});
